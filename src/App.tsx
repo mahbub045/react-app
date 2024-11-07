@@ -1,6 +1,9 @@
 import { useState } from "react";
 import ExpenseFilter from "./expense-tracker/components/ExpenseFilter";
 import ExpenseList from "./expense-tracker/components/ExpenseList";
+import ExpenseForm from "./expense-tracker/components/ExpenseForm";
+
+export const categories = ["Groceries", "Utilities", "Entertainment"]
 
 function App() {
   // const items = ["New Yourk", "Los Angeles", "San Francisco"];
@@ -30,6 +33,9 @@ function App() {
       <Like onClick={() => console.log("Clicked")} />
         <Message/> */}
       {/* <Form /> */}
+      <div className="mb-5">
+        <ExpenseForm/>
+      </div>
       <div className="mb-3">
         <ExpenseFilter
           onSelectCategory={(category) => setSelectedCategory(category)}
